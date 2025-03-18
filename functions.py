@@ -33,7 +33,8 @@ def calculate_gains(assigned_gallons: int, user_data: dict) -> dict:
     for store in range(1, user_data['stores']+1):
         gain = 0
         for i in range(user_data['boughtGallons']+1):
-            gain += user_data['demandPerGallonPerStore'][store][i]*aux(assigned_gallons, i, user_data)
+            print(user_data['demandPerGallonPerStore'][i][store-1])
+            gain += user_data['demandPerGallonPerStore'][i][store-1]*aux(assigned_gallons, i, user_data)
         gains[store] = gain
     return gains
 
