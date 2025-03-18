@@ -27,3 +27,18 @@ def get_demand(n_gallons: int, n_stores: int) -> dict:
             gallons.append(float(input(f'Ingrese la demanda diaria para {gallonDemand} galones en la tienda {store}: ')))
         demand[store] = gallons
     return demand
+
+def calculate_gains(assigned_gallons: int, user_data: dict) -> dict:
+    gains = {}
+    for store in range(1, user_data['stores']+1):
+        gain = 0
+        for i in range(user_data['boughtGallons']+1):
+            gain += user_data['demandPerGallonPerStore'][store][i]*aux(assigned_gallons, i, user_data)
+        gains[store] = gain
+    return gains
+
+def aux(x_n: int, i: int, user_data: dict) -> float:
+    if x_n > i:
+        return user_data['pricePerGallon']*i + user_data['pricePerRemainingStock']*(x_n - i)
+    else:
+        return user_data['pricePerGallon']*x_n
