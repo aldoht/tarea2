@@ -7,6 +7,7 @@ Simplemente basta con clonar el repositorio, tener python instalado y dentro de 
 ```
 $ py main.py
 ```
+También es posible solo descargar el [ejecutable](https://github.com/aldoht/tarea2/releases/tag/v1.0.0) que se encuentra en este mismo repositorio
 
 ## ¿Cómo usar el proyecto?
 Se te irán preguntando los parámetros del problema y solo tienes que poner el número, solo hay que tener cuidado ya que estos parámetros no cuentan con una validación, por lo que si ingresas un dato mal pues el programa se cerrará. Al final te mostrará la solución óptima con el valor óptimo y la ganancia neta.
