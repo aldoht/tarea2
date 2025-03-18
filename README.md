@@ -1,4 +1,7 @@
 # Tarea 2 de Investigación de Operaciones
+## Problema general
+La cadena de supermercados SAFECO compra a una lechería local a un precio de \$x por galón la cantidad de 'y' galones de leche. Cada galón se vende en las 'z' tiendas de la cadena a \$w cada galón. La lechería recoge de los supermercados la leche sobrante a \$u cada galón al finalizar el día. Desafortunadamente para SAFECO, la demanda de las tiendas es incierta, sin embargo, se tiene la evidencia de la tabla con la demanda diaria por galón de por tienda de los últimos 30 días. Si SAFECO desea asignar los galones a las tiendas de forma que se maximice la ganancia, ¿cómo debería hacerse dicha distribución?
+
 ## ¿Cómo ejecutar el proyecto?
 Simplemente basta con clonar el repositorio, tener python instalado y dentro de la carpeta ejecutamos en la terminal el comando
 ```
