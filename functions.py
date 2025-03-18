@@ -12,7 +12,7 @@ def get_inputs() -> dict:
         'costPerGallon': float(input('¿Cuánto costó cada galón? $')),
         'stores': int(input('¿En cuántas tiendas se van a vender los galones? ')),
         'pricePerGallon': float(input('¿A cuánto se venderá cada galón en las tiendas? $')),
-        'pricePerRemainingStock': float(input('¿A cuánto comprarán cada galón que no fue vendido?')),
+        'pricePerRemainingStock': float(input('¿A cuánto comprarán cada galón que no fue vendido? $')),
     }
 
     user_input['demandPerGallonPerStore'] = get_demand(user_input['boughtGallons'], user_input['stores'])
