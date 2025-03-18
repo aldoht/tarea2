@@ -44,3 +44,4 @@ for i in range(data['boughtGallons']+1):
 
 result = functions.assign_gallons(data['boughtGallons'], data['stores'], gains)
 print(f'La ganancia máxima es de ${round(result[0], 4)} con la siguiente asignación {result[1]}.')
+print(f'Al final se obtiene un beneficio de ${round(result[0], 4) - data['costPerGallon']*data['boughtGallons']}.')
