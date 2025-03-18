@@ -1,6 +1,4 @@
-import numpy as np
-
-def get_inputs() -> None:
+def get_inputs() -> dict:
     # Se requieren los siguientes datos del usuario:
     # - Cantidad de galones comprados
     # - Precio de compra por galón
@@ -17,8 +15,9 @@ def get_inputs() -> None:
         'pricePerRemainingStock': float(input('¿A cuánto comprarán cada galón que no fue vendido?')),
     }
 
-    # Revisar posible redundancia porque la ganancia después de x cantidad de galones puede ser la misma
     user_input['demandPerGallonPerStore'] = get_demand(user_input['boughtGallons'], user_input['stores'])
+
+    return user_input
 
 def get_demand(n_gallons: int, n_stores: int) -> dict:
     demand = {}
