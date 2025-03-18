@@ -21,11 +21,11 @@ def get_inputs() -> dict:
 
 def get_demand(n_gallons: int, n_stores: int) -> dict:
     demand = {}
-    for store in range(1, n_stores+1):
-        gallons = []
-        for gallonDemand in range(n_gallons+1):
-            gallons.append(float(input(f'Ingrese la demanda diaria para {gallonDemand} galones en la tienda {store}: ')))
-        demand[store] = gallons
+    for gallonDemand in range(n_gallons + 1):
+        demand_per_store = []
+        for store in range(n_stores):
+            demand_per_store.append(float(input(f'Ingrese la demanda diaria para {gallonDemand} galones en la tienda {store+1}: ')))
+        demand[gallonDemand] = demand_per_store
     return demand
 
 def calculate_gains(assigned_gallons: int, user_data: dict) -> dict:
@@ -45,7 +45,7 @@ def aux(x_n: int, i: int, user_data: dict) -> float:
 
 def assign_gallons(available_gallons: int, stores_left: int, gains: dict) -> tuple:
     if stores_left == 0 or available_gallons == 0:
-        return 0.0, [{'store': stores_left, 'gallons': 0}]
+        return 0.0, []
 
     max_val_store = 0.0
     max_assignment = 0
